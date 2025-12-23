@@ -1,40 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Product Listing Page (PLP) - Frontend Assessment
 
-## Getting Started
+This project is a fully responsive **Product Listing Page** built using **Next.js**. It replicates a modern e-commerce interface based on the provided Figma design, featuring server-side rendering (SSR) for optimal performance and SEO.
 
-First, run the development server:
+##  Features
+
+- **Server-Side Rendering (SSR):** Utilized `getServerSideProps` to fetch data before rendering, ensuring search engines can crawl the product data effectively.
+- **Responsive Design:** Fully fluid layout that adapts to Desktop, Tablet, and Mobile screens using Custom CSS Grid and Flexbox.
+- **Dynamic Filtering:** - Sidebar filters with expandable/collapsible categories.
+  - Sort functionality (Recommended, Price Low-High, etc.).
+- **Performance Optimized:** - Used **Next.js Image** optimization.
+  - Minimal external dependencies (Pure CSS Modules).
+  - Clean and modular code structure.
+- **SEO Friendly:** Proper use of Semantic HTML (`<header>`, `<main>`, `<article>`) and Meta tags.
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (React)
+- **Styling:** CSS Modules (Pure CSS, No Bootstrap/Tailwind)
+- **Data Source:** [Fake Store API](https://fakestoreapi.com/)
+- **Deployment:** Netlify
+
+## 📂 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+src/
+├── components/       # Reusable UI components
+│   ├── Header.js     # Navigation and Hero section
+│   ├── FilterBar.js  # Top filter strip
+│   ├── Sidebar.js    # Left side category filters
+│   ├── ProductCard.js# Individual product display component
+│   └── Footer.js     # Responsive footer
+├── pages/
+│   └── index.js      # Main page (SSR Logic lives here)
+├── styles/
+│   └── globals.css   # Global resets and fonts
