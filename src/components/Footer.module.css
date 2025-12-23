@@ -1,0 +1,197 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 40px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 50px;
+}
+
+/* --- UPPER SECTION (Newsletter & Contact) --- */
+.upperSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #333; /* Dark divider line */
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.subText {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Newsletter Input styling */
+.subscribeBox {
+  display: flex;
+  gap: 15px;
+}
+
+.input {
+  padding: 12px 15px;
+  width: 300px;
+  border: 1px solid #fff;
+  background: rgba(255,255,255,0.1); /* Transparent look */
+  color: #fff;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.subscribeBtn {
+  padding: 12px 30px;
+  background: #fff; /* Contrast button */
+  color: #000;
+  border: 1px solid #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.subscribeBtn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Contact Info Styling */
+.contactInfo p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.currencySection {
+  margin-top: 20px;
+}
+
+.currencyIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  background: url('https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg') center/cover;
+  border-radius: 50%;
+}
+
+/* --- LOWER SECTION (Links) --- */
+.lowerSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  gap: 30px;
+}
+
+.linkColumn {
+  min-width: 150px;
+}
+
+.linkColumn ul {
+  list-style: none;
+}
+
+.linkColumn li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.linkColumn li:hover {
+  color: #ff4b2b; /* Theme color on hover */
+  padding-left: 5px; /* Slide effect */
+}
+
+/* Social & Payment Icons */
+.socialIcons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  background: #fff;
+  color: #000;
+}
+
+.paymentIcons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.paymentCard {
+  background: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: 40px;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+  
+  .upperSection, .lowerSection {
+    flex-direction: column; /* Stack everything vertically */
+    gap: 30px;
+  }
+
+  .subscribeBox {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .subscribeBtn {
+    width: 100%;
+  }
+
+  /* Accordion-like look for mobile links */
+  .linkColumn {
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+  }
+}

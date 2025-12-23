@@ -1,0 +1,134 @@
+/* Container with a soft shadow to make it pop */
+.headerContainer {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow effect */
+  position: sticky; /* Sticks to top when scrolling */
+  top: 0;
+  z-index: 100;
+}
+
+/* Colorful Top Strip - Gradient Effect */
+.topStrip {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b); /* Red-Orange Gradient */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Main Navigation Layout */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.navLinks {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.navLinks li {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth animation */
+  position: relative;
+}
+
+/* Hover Effect: Change color and add underline */
+.navLinks li:hover {
+  color: #ff4b2b; /* Matches the top strip color */
+}
+
+.navLinks li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #ff4b2b;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.navLinks li:hover::after {
+  width: 100%; /* Expands underline on hover */
+}
+
+/* Icons styling */
+.icons {
+  display: flex;
+  gap: 25px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+.icons span:hover {
+  color: #ff4b2b;
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  transition: 0.2s;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Hidden on mobile */
+  }
+  .nav {
+    padding: 15px 20px;
+  }
+}
+
+/* Hero Section Styling */
+.heroSection {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.heroTitle {
+  font-size: 56px;
+  font-weight: 300;
+  color: #222;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Making the word 'DISCOVER' gradient */
+.highlight {
+  background: -webkit-linear-gradient(#ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.heroDescription {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
